@@ -2,6 +2,24 @@ import React,{Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+function NumberOne(props){
+  return (
+    <h2>{props.title}</h2>
+  )
+}
+
+//su dung class de thao tac voi props
+class NumberTwo extends Component {
+  render() {
+    return (
+      <div>
+        <h3>{this.props.title}</h3>
+        <img src={this.props.linkanh}></img> 
+        </div>
+    );
+  }
+}
+
 function One(){
   return (
     <div>
@@ -45,10 +63,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <One></One>
-        <Two></Two>
-        <Three></Three>
-        <Four></Four>
+        <NumberOne title = "anh trung dz"></NumberOne>
+        <NumberTwo title = "anh Trung dz" linkanh = "https://kenh14cdn.com/thumb_w/660/203336854389633024/2021/1/27/sontungchinhthuctungmvchungtacuahientaie18be2c0-161173682811058447996.jpg"></NumberTwo>
         <a
           className="App-link"
           href="https://reactjs.org"
