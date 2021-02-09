@@ -1,15 +1,19 @@
 import fbData from './firebaseConnect';
 
 var redux = require('redux');
-var store = redux.createStore(allReducer);
-const noteInitialState = {}
+const noteInitialState = {
+    testConnect : 'justTest'
+}
 const allReducer = (state = noteInitialState, action) => {
     switch (action.type) {
         case "ADD_DATA":
-            return state
-        case ACTION_TYPE_2:
+            fbData.push(action.item);
+            console.log("them thanh cong");
             return state
         default:
             return state
     }
 }
+var store1 = redux.createStore(allReducer);
+
+export default store1;

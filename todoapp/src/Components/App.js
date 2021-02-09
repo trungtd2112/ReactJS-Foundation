@@ -22,9 +22,9 @@ class App extends Component {
   }
 
   render() {
-    fbData.once('value').then(function(snapshot){
-      console.log(snapshot.val());
-    })
+    // fbData.once('value').then(function(snapshot){
+    //   console.log(snapshot.val());
+    // })
     return (
       <div>
         <Nav></Nav>
